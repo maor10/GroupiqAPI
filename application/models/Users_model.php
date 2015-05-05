@@ -18,6 +18,23 @@ class Users_model extends CI_Model {
     function createNewFbUser($token){
        $data = array('facebooktoken' => $token);
        $this->db->insert('users', $data);
+       
+       if ($this->db->_error_message()){
+           echo $this->db->error_message();
+       }else{
+           echo "0";
+       }
+    }
+    function createNewUserWithEmailAndPassword($password, $email){
+        $data = array('password' => $password, 'email' => $email);
+        $this->db->insert('users', $data);
+        if($this->db->_error_message()){
+            echo $this->db->error_message();
+        }else {
+            echo "0";
+        
+    }
+    
     }
 }
     
