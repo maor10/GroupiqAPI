@@ -33,7 +33,13 @@ class Gatherings_model extends CI_Model {
         $query = $this->db->get();
         $result = $query->result();
 
-        
+        if(count($result) == 0){
+            return "-1";
+        }
+        else{
+            $gathering = $result[0];
+            return "-2";
+        }
 
     }
 

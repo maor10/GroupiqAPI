@@ -3,8 +3,8 @@
         function __construct(){
             parent::__construct();
         }
-        function createNewImage($imageurl){
-            $data = array('imageurl' => $imageurl);
+        function createNewImage($imageurl, $gatheringId){
+            $data = array('imageurl' => $imageurl, 'gatheringid' => $gatheringId);
             $this->db->insert('photourl', $data);
        
             if ($this->db->_error_message()){
