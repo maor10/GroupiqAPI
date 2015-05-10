@@ -38,7 +38,7 @@ class Gatherings_model extends CI_Model {
         }
         else{
             $gathering = $result[0];
-            return "-2";
+            return $gathering;
         }
 
     }
