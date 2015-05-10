@@ -25,5 +25,16 @@ class Gatherings_model extends CI_Model {
             return $this->db->insert_id();
         }
     }
+    function joingathering($password){
+        $this->db->select("*");
+        $this->db->from("gatherings");
+        $this->db->where("password", $password);
+
+        $query = $this->db->get();
+        $result = $query->result();
+
+        
+
+    }
 
 }

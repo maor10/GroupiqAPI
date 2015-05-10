@@ -19,5 +19,11 @@ class Gatherings extends CI_Controller {
         echo $this->gatherings_model->createNewGathering($name, NULL, $isPublic, null, NULL);
 
     }
+    function joinGathering(){
+    	$password = $this->input->post("Password");
+    	$this->load->model("gatherings_model");
+    	echo json_encode($this->gatherings_model->joinGathering($password));
+
+    }
 
 }
