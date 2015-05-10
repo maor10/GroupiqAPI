@@ -1,9 +1,9 @@
 <?php
-    class Uploadimage_model extends CI_Model{
+    class Image_model extends CI_Model{
         function __construct(){
             parent::__construct();
         }
-        function createnewimage($imageurl){
+        function createNewImage($imageurl){
             $data = array('imageurl' => $imageurl);
             $this->db->insert('photourl', $data);
        
@@ -19,4 +19,3 @@
         
     }
 
-?>
